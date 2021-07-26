@@ -28,9 +28,19 @@ function App() {
     defaultClothesColor
   );
 
-  return (
+  return (<>
     <main className={styles.characterEditor}>
       <MaxWidthWrapper className={styles.maxWidthWrapper}>
+        <div className={styles.characterWrapper}>
+          <Character
+              body={body}
+              head={head}
+              face={face}
+              accessory={accessory}
+              skinColor={skinColor}
+              clothesColor={clothesColor}
+          />
+        </div>
         <header className={styles.header}>
           <h1 className={styles.title}>Create your Character</h1>
           <p className={styles.description}>
@@ -78,17 +88,10 @@ function App() {
         </div>
       </MaxWidthWrapper>
 
-      <div className={styles.characterWrapper}>
-        <Character
-          body={body}
-          head={head}
-          face={face}
-          accessory={accessory}
-          skinColor={skinColor}
-          clothesColor={clothesColor}
-        />
-      </div>
+    <div className={styles.bg}/>
     </main>
+      </>
+
   );
 }
 
